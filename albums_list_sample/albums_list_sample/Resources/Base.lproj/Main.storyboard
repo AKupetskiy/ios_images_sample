@@ -13,32 +13,34 @@
         <scene sceneID="Tox-86-NU8">
             <objects>
                 <tableViewController storyboardIdentifier="PhotosListStoryboardID" id="5Ii-LA-Ojy" customClass="PhotosListViewController" customModule="albums_list_sample" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bHn-0u-tRA">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="bHn-0u-tRA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PhotosListCell" id="u0B-80-4pD" customClass="PhotosListTableViewCell" customModule="albums_list_sample" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PhotosListCell" rowHeight="90" id="u0B-80-4pD" customClass="PhotosListTableViewCell" customModule="albums_list_sample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u0B-80-4pD" id="h8N-K3-uXB">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u0B-80-4pD" id="h8N-K3-uXB">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Qi-ma-tBk">
-                                            <rect key="frame" x="5" y="2" width="40" height="40"/>
-                                            <color key="backgroundColor" red="0.22104657405092942" green="1" blue="0.99868346026132704" alpha="0.44999464897260272" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mYy-uM-jOQ">
+                                            <rect key="frame" x="5" y="5" width="80" height="79.5"/>
+                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="SjC-r5-nGY"/>
-                                                <constraint firstAttribute="width" constant="40" id="UEt-Gl-v5l"/>
+                                                <constraint firstAttribute="height" constant="80" id="5NS-iW-vE5"/>
+                                                <constraint firstAttribute="width" constant="80" id="AtL-2X-xI1"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="5NS-iW-vE5"/>
+                                                </mask>
+                                            </variation>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JoU-4z-dHI">
-                                            <rect key="frame" x="50" y="5" width="359" height="40"/>
-                                            <color key="backgroundColor" red="0.60788023471832275" green="0.95161706209182739" blue="0.86229056119918823" alpha="0.14332726883561644" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Emg-ia-RBi"/>
-                                            </constraints>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6N-bj-Ik1">
+                                            <rect key="frame" x="90" y="5" width="319" height="79.5"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -46,17 +48,19 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="JoU-4z-dHI" secondAttribute="trailing" constant="5" id="E8D-hS-I1M"/>
-                                        <constraint firstItem="7Qi-ma-tBk" firstAttribute="centerY" secondItem="h8N-K3-uXB" secondAttribute="centerY" id="HWh-4c-dag"/>
-                                        <constraint firstAttribute="bottom" secondItem="JoU-4z-dHI" secondAttribute="bottom" constant="5" id="Rtp-4q-f3K"/>
-                                        <constraint firstItem="7Qi-ma-tBk" firstAttribute="leading" secondItem="h8N-K3-uXB" secondAttribute="leading" constant="5" id="fxM-3f-Qkt"/>
-                                        <constraint firstItem="JoU-4z-dHI" firstAttribute="leading" secondItem="7Qi-ma-tBk" secondAttribute="trailing" constant="5" id="kMI-pX-HQR"/>
-                                        <constraint firstItem="JoU-4z-dHI" firstAttribute="top" secondItem="h8N-K3-uXB" secondAttribute="top" constant="5" id="weu-bl-eGp"/>
+                                        <constraint firstItem="b6N-bj-Ik1" firstAttribute="bottom" secondItem="mYy-uM-jOQ" secondAttribute="bottom" id="4ZF-Vk-1oh"/>
+                                        <constraint firstAttribute="bottom" secondItem="mYy-uM-jOQ" secondAttribute="bottom" constant="5" id="7QS-PS-7ge"/>
+                                        <constraint firstItem="mYy-uM-jOQ" firstAttribute="leading" secondItem="h8N-K3-uXB" secondAttribute="leading" constant="5" id="9cG-S5-iu8"/>
+                                        <constraint firstItem="b6N-bj-Ik1" firstAttribute="top" secondItem="mYy-uM-jOQ" secondAttribute="top" id="myd-rz-RKk"/>
+                                        <constraint firstAttribute="trailing" secondItem="b6N-bj-Ik1" secondAttribute="trailing" constant="5" id="u8y-0L-mbc"/>
+                                        <constraint firstItem="b6N-bj-Ik1" firstAttribute="leading" secondItem="mYy-uM-jOQ" secondAttribute="trailing" constant="5" id="v4b-V4-f78"/>
+                                        <constraint firstItem="mYy-uM-jOQ" firstAttribute="top" secondItem="h8N-K3-uXB" secondAttribute="top" constant="5" id="wVw-fu-xI2"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <outlet property="albumImageView" destination="7Qi-ma-tBk" id="N18-Bm-foE"/>
-                                    <outlet property="albumTitleLabel" destination="JoU-4z-dHI" id="41L-JW-tgH"/>
+                                    <outlet property="albumImageView" destination="mYy-uM-jOQ" id="g1F-LB-kPM"/>
+                                    <outlet property="albumTitleLabel" destination="b6N-bj-Ik1" id="Uuv-Um-yq0"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

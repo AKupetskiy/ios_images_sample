@@ -12,8 +12,11 @@ final class PhotosListDefaultInteractor: PhotosListInteractorInput {
     weak var output: PhotosListInteractourOutput?
 
     private let imageService: ImageService
-    init(imageService: ImageService) {
+    private let imageStorage: ImageStorage
+
+    init(imageService: ImageService, imageStorage: ImageStorage) {
         self.imageService = imageService
+        self.imageStorage = imageStorage
     }
 
     func fetchPhotos() {
@@ -23,7 +26,7 @@ final class PhotosListDefaultInteractor: PhotosListInteractorInput {
             case .failure(let error):
                 self.output?.photosFailedToLoad(error: error)
             case .success(let photos):
-                let items = photos.map { PhotosListItem(photo: $0) }
+                let items = photos.map { PhotosListItem(photo: $0, storage: self.imageStorage) }
 
                 self.output?.photosLoaded(photos: items)
             }

@@ -14,21 +14,36 @@ final class PhotosListItem {
     let id: Int
     let albumId: Int
 
-    let imageURL: String
     let thumbURL: String
 
-    var onImageProvided:((UIImage?) -> Void)?
-    private var image: UIImage?
+    weak var storage: ImageStorage?
 
     var onThumbProvided:((UIImage?) -> Void)?
     private var thumbnail: UIImage?
 
-    init(photo: Photo) {
+    init(photo: Photo, storage: ImageStorage? = nil) {
         self.title = photo.title
         self.id = photo.id
         self.albumId = photo.albumId
-
-        self.imageURL = photo.url
         self.thumbURL = photo.thumbnailUrl
+        self.storage = storage
     }
+
+    func downloadImage() {
+        if let thumbnail = thumbnail {
+            onThumbProvided?(thumbnail)
+            return
+        }
+
+        storage?.provideImage(thumbURL) { result in
+            // check if image is for corrent item
+            if case let .success(tuple) = result,
+                self.thumbURL == tuple.url {
+
+                self.thumbnail = tuple.image
+                self.onThumbProvided?(tuple.image)
+            }
+        }
+    }
+
 }

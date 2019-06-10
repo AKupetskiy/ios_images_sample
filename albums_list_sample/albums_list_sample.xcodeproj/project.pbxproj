@@ -29,6 +29,9 @@
 		9DC2CB7D22AD0FB500DE3E21 /* PhotosListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2CB7C22AD0FB500DE3E21 /* PhotosListItem.swift */; };
 		9DC2CB7F22AD13AB00DE3E21 /* PhotosListDefaultInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2CB7E22AD13AB00DE3E21 /* PhotosListDefaultInteractor.swift */; };
 		9DC2CB8222AD1A0100DE3E21 /* PhotosListDefaultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2CB8122AD1A0100DE3E21 /* PhotosListDefaultRouter.swift */; };
+		9DC2CB8C22AEB9FB00DE3E21 /* ImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2CB8B22AEB9FB00DE3E21 /* ImageStorage.swift */; };
+		9DC2CB8E22AEBC2000DE3E21 /* SimpleImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2CB8D22AEBC2000DE3E21 /* SimpleImageStorage.swift */; };
+		9DC2CB9022AEC47A00DE3E21 /* ImageStorageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2CB8F22AEC47A00DE3E21 /* ImageStorageFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +59,9 @@
 		9DC2CB7C22AD0FB500DE3E21 /* PhotosListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListItem.swift; sourceTree = "<group>"; };
 		9DC2CB7E22AD13AB00DE3E21 /* PhotosListDefaultInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListDefaultInteractor.swift; sourceTree = "<group>"; };
 		9DC2CB8122AD1A0100DE3E21 /* PhotosListDefaultRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListDefaultRouter.swift; sourceTree = "<group>"; };
+		9DC2CB8B22AEB9FB00DE3E21 /* ImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStorage.swift; sourceTree = "<group>"; };
+		9DC2CB8D22AEBC2000DE3E21 /* SimpleImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleImageStorage.swift; sourceTree = "<group>"; };
+		9DC2CB8F22AEC47A00DE3E21 /* ImageStorageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStorageFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 		9DC2CB4F22ACE3D300DE3E21 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				9DC2CB8A22AEB9EB00DE3E21 /* ImageStorage */,
 				9DC2CB5922ACED9700DE3E21 /* API client */,
 				9DC2CB5A22ACED9F00DE3E21 /* ImageService */,
 				9DC2CB5E22ACEDFE00DE3E21 /* Models */,
@@ -235,6 +242,16 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		9DC2CB8A22AEB9EB00DE3E21 /* ImageStorage */ = {
+			isa = PBXGroup;
+			children = (
+				9DC2CB8B22AEB9FB00DE3E21 /* ImageStorage.swift */,
+				9DC2CB8D22AEBC2000DE3E21 /* SimpleImageStorage.swift */,
+				9DC2CB8F22AEC47A00DE3E21 /* ImageStorageFactory.swift */,
+			);
+			path = ImageStorage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -315,14 +332,17 @@
 				9DC2CB5322ACEA2900DE3E21 /* SimpleImageService.swift in Sources */,
 				9D732DB522AC33E4003F98C2 /* AppDelegate.swift in Sources */,
 				9DC2CB7D22AD0FB500DE3E21 /* PhotosListItem.swift in Sources */,
+				9DC2CB8E22AEBC2000DE3E21 /* SimpleImageStorage.swift in Sources */,
 				9DC2CB5122ACE88A00DE3E21 /* APIClient.swift in Sources */,
 				9DC2CB7122AD00C900DE3E21 /* PhotosListView.swift in Sources */,
 				9DC2CB6122ACEE1E00DE3E21 /* Photo.swift in Sources */,
 				9DC2CB7322AD010500DE3E21 /* PhotosListInteractor.swift in Sources */,
 				9DC2CB5D22ACEDF800DE3E21 /* PhotosRequest.swift in Sources */,
 				9DC2CB8222AD1A0100DE3E21 /* PhotosListDefaultRouter.swift in Sources */,
+				9DC2CB9022AEC47A00DE3E21 /* ImageStorageFactory.swift in Sources */,
 				9DC2CB5622ACEC8200DE3E21 /* ImageServiceFactory.swift in Sources */,
 				9DC2CB5822ACECA700DE3E21 /* ImageService.swift in Sources */,
+				9DC2CB8C22AEB9FB00DE3E21 /* ImageStorage.swift in Sources */,
 				9DC2CB7522AD011800DE3E21 /* PhotosListRouter.swift in Sources */,
 				9DC2CB7F22AD13AB00DE3E21 /* PhotosListDefaultInteractor.swift in Sources */,
 			);

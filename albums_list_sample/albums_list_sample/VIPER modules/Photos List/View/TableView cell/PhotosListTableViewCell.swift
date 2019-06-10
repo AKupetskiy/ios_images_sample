@@ -15,6 +15,13 @@ class PhotosListTableViewCell: UITableViewCell {
 
     private var item: PhotosListItem!
 
+    override func prepareForReuse() {
+        albumImageView.image = nil
+        albumTitleLabel.text = nil
+
+        item.onThumbProvided = nil
+    }
+
     func configureWith(item: PhotosListItem) {
         self.item = item
 
@@ -23,5 +30,7 @@ class PhotosListTableViewCell: UITableViewCell {
         self.item.onThumbProvided = { [weak self] image in
             self?.albumImageView.image = image
         }
+
+        self.item.downloadImage()
     }
 }

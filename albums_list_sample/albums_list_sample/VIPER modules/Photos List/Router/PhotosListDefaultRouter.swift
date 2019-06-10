@@ -13,11 +13,13 @@ final class PhotosListDefaultRouter: PhotosListRouter {
 
     func presentModule(on parentController: UIViewController) {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-
         let view = storyboard.instantiateViewController(withIdentifier: "PhotosListStoryboardID") as! PhotosListViewController
 
         let service = ImageServiceFactory.createService()
-        let interactor = PhotosListDefaultInteractor(imageService: service)
+        let storage = ImageStorageFactory.createStrorage(callbackQueue: .main)
+
+        let interactor = PhotosListDefaultInteractor(imageService: service, imageStorage: storage)
+        
         let presenter = PhotosListDefaultPresenter(view: view, interactor: interactor, router: self)
 
         view.output = presenter

@@ -24,8 +24,6 @@ class PhotosListViewController: UITableViewController, PhotosListViewInput {
     func setupView() {
         tableView.tableFooterView = UIView()
 
-        tableView.rowHeight = UITableView.automaticDimension;
-        tableView.estimatedRowHeight = 100.0;
     }
 
     func display(photos: [PhotosListItem]) {
