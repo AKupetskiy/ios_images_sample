@@ -6,10 +6,11 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Photos List View Controller-->
+        <!--Photos-->
         <scene sceneID="Tox-86-NU8">
             <objects>
                 <tableViewController storyboardIdentifier="PhotosListStoryboardID" id="5Ii-LA-Ojy" customClass="PhotosListViewController" customModule="albums_list_sample" customModuleProvider="target" sceneMemberID="viewController">
@@ -69,10 +70,90 @@
                             <outlet property="delegate" destination="5Ii-LA-Ojy" id="Qng-Nj-ntZ"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Photos" id="tJi-55-NRK">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Vl4-rc-Wzh">
+                            <connections>
+                                <action selector="createButtonPressed" destination="5Ii-LA-Ojy" id="9ES-w1-AqE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SAr-2A-ex1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="149" y="-236"/>
+        </scene>
+        <!--Add photo-->
+        <scene sceneID="lRy-VX-JSh">
+            <objects>
+                <viewController storyboardIdentifier="AddPhotoStoryboardID" id="As8-MH-lxD" customClass="AddPhotoViewController" customModule="albums_list_sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WkQ-Xw-eCW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qcg-hY-lNo">
+                                <rect key="frame" x="10" y="108" width="394" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name new photo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0n-ck-fwC">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Photo name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rfi-Nq-rsW">
+                                        <rect key="frame" x="0.0" y="30" width="394" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textChanged:" destination="As8-MH-lxD" eventType="editingChanged" id="aPf-1k-D13"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select album name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ja1-oG-2Hf">
+                                        <rect key="frame" x="0.0" y="60" width="394" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="album name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3AP-2z-6nh" customClass="CustomTextField" customModule="albums_list_sample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="90" width="394" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qcg-hY-lNo" firstAttribute="top" secondItem="tEs-xd-Dpi" secondAttribute="top" constant="20" id="AtB-Ej-HKw"/>
+                            <constraint firstItem="tEs-xd-Dpi" firstAttribute="trailing" secondItem="qcg-hY-lNo" secondAttribute="trailing" constant="10" id="BxJ-9H-T4G"/>
+                            <constraint firstItem="qcg-hY-lNo" firstAttribute="leading" secondItem="tEs-xd-Dpi" secondAttribute="leading" constant="10" id="Jjv-oN-kb2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tEs-xd-Dpi"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add photo" id="NFW-hv-1Xd">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="08h-qC-U8n">
+                            <connections>
+                                <action selector="cancelButtonPressed" destination="As8-MH-lxD" id="ZaN-to-40s"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Create" id="0i4-Vl-dNN">
+                            <connections>
+                                <action selector="createButtonPressed" destination="As8-MH-lxD" id="co0-p5-MHA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="albumIdTextField" destination="3AP-2z-6nh" id="x4H-9f-WWg"/>
+                        <outlet property="createButton" destination="0i4-Vl-dNN" id="SSV-2z-x58"/>
+                        <outlet property="nameTextField" destination="rfi-Nq-rsW" id="J2e-0c-EWU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qUS-uz-WpK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892.75362318840587" y="-236.38392857142856"/>
         </scene>
     </scenes>
 </document>

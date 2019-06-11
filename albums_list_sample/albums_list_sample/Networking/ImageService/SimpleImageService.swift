@@ -16,7 +16,7 @@ final class SimpleImageService: ImageService {
     }
 
     func getPhotos(_ completion: @escaping (Result<[Photo], Error>) -> Void) {
-        apiClient.send(PhotosRequest()) { response in
+        apiClient.get(PhotosRequest()) { response in
                 switch response {
                 case .success(let results):
                     completion(.success(results))
@@ -24,5 +24,31 @@ final class SimpleImageService: ImageService {
                     completion(.failure(error))
                 }
             }
+    }
+
+    func getAlbums(_ completion: @escaping (Result<[Album], Error>) -> Void) {
+        apiClient.get(AlbumsRequest()) { response in
+            switch response {
+            case .success(let results):
+                completion(.success(results))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+
+    func createPhoto(name: String, albumId: Int, _ completion: @escaping (Result<Void, Error>) -> Void) {
+        let request = CreatePhotoRequest(name: name, albumId: albumId)
+        
+        apiClient.post(request) { response in
+            switch response {
+            case .success(_):
+                completion(.success(()))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+
+
     }
 }

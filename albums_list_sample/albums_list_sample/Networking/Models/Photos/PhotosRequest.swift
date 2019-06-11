@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct PhotosRequest: APIRequest {
+struct PhotosRequest: APIGETRequest {
     typealias Response = [Photo]
 
     var resourceName: String {

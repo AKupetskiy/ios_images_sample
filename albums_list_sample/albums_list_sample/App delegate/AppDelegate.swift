@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = navController
         window?.makeKeyAndVisible()
 
-        PhotosListDefaultRouter().presentModule(on: navController)
+        PhotosListDefaultRouter(parentController: navController).presentModule()
 
         return true
     }

@@ -11,7 +11,18 @@ import UIKit
 
 final class PhotosListDefaultRouter: PhotosListRouter {
 
-    func presentModule(on parentController: UIViewController) {
+    let parentController: UIViewController
+
+    init(parentController: UIViewController) {
+        self.parentController = parentController
+    }
+
+    func presentAddPhotoScreen() {
+        let addPhotoRouter = AddPhotoDefaultRouter(parentController: parentController)
+        addPhotoRouter.presentModule()
+    }
+
+    func presentModule() {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let view = storyboard.instantiateViewController(withIdentifier: "PhotosListStoryboardID") as! PhotosListViewController
 

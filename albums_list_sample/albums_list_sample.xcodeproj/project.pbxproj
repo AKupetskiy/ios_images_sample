@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D21E99122AF895C00E9286D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D21E99022AF895C00E9286D /* CustomTextField.swift */; };
+		9D21E99322AF8D7200E9286D /* AlbumNameValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D21E99222AF8D7200E9286D /* AlbumNameValidator.swift */; };
+		9D21E9A422B0411600E9286D /* CreatePhotoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D21E9A322B0411600E9286D /* CreatePhotoRequest.swift */; };
 		9D732DB522AC33E4003F98C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D732DB422AC33E4003F98C2 /* AppDelegate.swift */; };
 		9D732DB722AC33E4003F98C2 /* PhotosListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D732DB622AC33E4003F98C2 /* PhotosListViewController.swift */; };
 		9D732DBA22AC33E4003F98C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D732DB822AC33E4003F98C2 /* Main.storyboard */; };
@@ -32,9 +35,24 @@
 		9DC2CB8C22AEB9FB00DE3E21 /* ImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2CB8B22AEB9FB00DE3E21 /* ImageStorage.swift */; };
 		9DC2CB8E22AEBC2000DE3E21 /* SimpleImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2CB8D22AEBC2000DE3E21 /* SimpleImageStorage.swift */; };
 		9DC2CB9022AEC47A00DE3E21 /* ImageStorageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2CB8F22AEC47A00DE3E21 /* ImageStorageFactory.swift */; };
+		9DC2CB9722AEED1C00DE3E21 /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2CB9622AEED1C00DE3E21 /* AddPhotoView.swift */; };
+		9DC2CB9922AEEDBD00DE3E21 /* AddPhotoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2CB9822AEEDBD00DE3E21 /* AddPhotoInteractor.swift */; };
+		9DC2CB9C22AEEE0600DE3E21 /* AlbumItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2CB9B22AEEE0600DE3E21 /* AlbumItem.swift */; };
+		9DC2CB9E22AEEE3100DE3E21 /* AddPhotoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2CB9D22AEEE3100DE3E21 /* AddPhotoPresenter.swift */; };
+		9DC2CBA022AEEE5400DE3E21 /* AddPhotoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2CB9F22AEEE5400DE3E21 /* AddPhotoRouter.swift */; };
+		9DC2CBA222AEEE9000DE3E21 /* AddPhotoDefaultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2CBA122AEEE9000DE3E21 /* AddPhotoDefaultRouter.swift */; };
+		9DC2CBA422AEEE9B00DE3E21 /* AddPhotoDefaultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2CBA322AEEE9B00DE3E21 /* AddPhotoDefaultPresenter.swift */; };
+		9DC2CBA622AEEEA800DE3E21 /* AddPhotoDefaultInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2CBA522AEEEA800DE3E21 /* AddPhotoDefaultInteractor.swift */; };
+		9DC2CBA822AEEEB200DE3E21 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2CBA722AEEEB200DE3E21 /* AddPhotoViewController.swift */; };
+		9DC2CBAC22AEEF1E00DE3E21 /* UIViewController+DisplayError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2CBAB22AEEF1E00DE3E21 /* UIViewController+DisplayError.swift */; };
+		9DC2CBAF22AF843C00DE3E21 /* AlbumRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2CBAE22AF843C00DE3E21 /* AlbumRequest.swift */; };
+		9DC2CBB122AF844400DE3E21 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2CBB022AF844400DE3E21 /* Album.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D21E99022AF895C00E9286D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		9D21E99222AF8D7200E9286D /* AlbumNameValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumNameValidator.swift; sourceTree = "<group>"; };
+		9D21E9A322B0411600E9286D /* CreatePhotoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePhotoRequest.swift; sourceTree = "<group>"; };
 		9D732DB122AC33E4003F98C2 /* albums_list_sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = albums_list_sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D732DB422AC33E4003F98C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D732DB622AC33E4003F98C2 /* PhotosListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +80,18 @@
 		9DC2CB8B22AEB9FB00DE3E21 /* ImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStorage.swift; sourceTree = "<group>"; };
 		9DC2CB8D22AEBC2000DE3E21 /* SimpleImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleImageStorage.swift; sourceTree = "<group>"; };
 		9DC2CB8F22AEC47A00DE3E21 /* ImageStorageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStorageFactory.swift; sourceTree = "<group>"; };
+		9DC2CB9622AEED1C00DE3E21 /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
+		9DC2CB9822AEEDBD00DE3E21 /* AddPhotoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoInteractor.swift; sourceTree = "<group>"; };
+		9DC2CB9B22AEEE0600DE3E21 /* AlbumItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumItem.swift; sourceTree = "<group>"; };
+		9DC2CB9D22AEEE3100DE3E21 /* AddPhotoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoPresenter.swift; sourceTree = "<group>"; };
+		9DC2CB9F22AEEE5400DE3E21 /* AddPhotoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoRouter.swift; sourceTree = "<group>"; };
+		9DC2CBA122AEEE9000DE3E21 /* AddPhotoDefaultRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoDefaultRouter.swift; sourceTree = "<group>"; };
+		9DC2CBA322AEEE9B00DE3E21 /* AddPhotoDefaultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoDefaultPresenter.swift; sourceTree = "<group>"; };
+		9DC2CBA522AEEEA800DE3E21 /* AddPhotoDefaultInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoDefaultInteractor.swift; sourceTree = "<group>"; };
+		9DC2CBA722AEEEB200DE3E21 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
+		9DC2CBAB22AEEF1E00DE3E21 /* UIViewController+DisplayError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+DisplayError.swift"; sourceTree = "<group>"; };
+		9DC2CBAE22AF843C00DE3E21 /* AlbumRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumRequest.swift; sourceTree = "<group>"; };
+		9DC2CBB022AF844400DE3E21 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +124,7 @@
 		9D732DB322AC33E4003F98C2 /* albums_list_sample */ = {
 			isa = PBXGroup;
 			children = (
+				9DC2CBA922AEEF0700DE3E21 /* Util */,
 				9DC2CB6922ACFF5100DE3E21 /* Resources */,
 				9DC2CB6822ACFF4200DE3E21 /* App delegate */,
 				9DC2CB4F22ACE3D300DE3E21 /* Networking */,
@@ -136,6 +167,7 @@
 		9DC2CB5E22ACEDFE00DE3E21 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9DC2CBAD22AF843300DE3E21 /* Album */,
 				9DC2CB5F22ACEE0700DE3E21 /* Photos */,
 			);
 			path = Models;
@@ -146,6 +178,7 @@
 			children = (
 				9DC2CB5C22ACEDF800DE3E21 /* PhotosRequest.swift */,
 				9DC2CB6022ACEE1E00DE3E21 /* Photo.swift */,
+				9D21E9A322B0411600E9286D /* CreatePhotoRequest.swift */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
@@ -153,6 +186,7 @@
 		9DC2CB6622ACFF2700DE3E21 /* VIPER modules */ = {
 			isa = PBXGroup;
 			children = (
+				9DC2CB9122AEECED00DE3E21 /* Add Photo */,
 				9DC2CB6722ACFF3300DE3E21 /* Photos List */,
 			);
 			path = "VIPER modules";
@@ -252,6 +286,89 @@
 			path = ImageStorage;
 			sourceTree = "<group>";
 		};
+		9DC2CB9122AEECED00DE3E21 /* Add Photo */ = {
+			isa = PBXGroup;
+			children = (
+				9DC2CB9A22AEEDFA00DE3E21 /* Resources */,
+				9DC2CB9522AEED0800DE3E21 /* Router */,
+				9DC2CB9422AEED0300DE3E21 /* Presenter */,
+				9DC2CB9322AEECFC00DE3E21 /* Interactor */,
+				9DC2CB9222AEECF700DE3E21 /* View */,
+			);
+			path = "Add Photo";
+			sourceTree = "<group>";
+		};
+		9DC2CB9222AEECF700DE3E21 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9DC2CB9622AEED1C00DE3E21 /* AddPhotoView.swift */,
+				9DC2CBA722AEEEB200DE3E21 /* AddPhotoViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9DC2CB9322AEECFC00DE3E21 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				9DC2CB9822AEEDBD00DE3E21 /* AddPhotoInteractor.swift */,
+				9DC2CBA522AEEEA800DE3E21 /* AddPhotoDefaultInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		9DC2CB9422AEED0300DE3E21 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9DC2CB9D22AEEE3100DE3E21 /* AddPhotoPresenter.swift */,
+				9DC2CBA322AEEE9B00DE3E21 /* AddPhotoDefaultPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9DC2CB9522AEED0800DE3E21 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9DC2CB9F22AEEE5400DE3E21 /* AddPhotoRouter.swift */,
+				9DC2CBA122AEEE9000DE3E21 /* AddPhotoDefaultRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		9DC2CB9A22AEEDFA00DE3E21 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9DC2CB9B22AEEE0600DE3E21 /* AlbumItem.swift */,
+				9D21E99222AF8D7200E9286D /* AlbumNameValidator.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9DC2CBA922AEEF0700DE3E21 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				9DC2CBAA22AEEF0E00DE3E21 /* Extensions */,
+				9D21E99022AF895C00E9286D /* CustomTextField.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		9DC2CBAA22AEEF0E00DE3E21 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9DC2CBAB22AEEF1E00DE3E21 /* UIViewController+DisplayError.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9DC2CBAD22AF843300DE3E21 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				9DC2CBAE22AF843C00DE3E21 /* AlbumRequest.swift */,
+				9DC2CBB022AF844400DE3E21 /* Album.swift */,
+			);
+			path = Album;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -326,23 +443,38 @@
 				9DC2CB7722AD038400DE3E21 /* PhotosListDefaultPresenter.swift in Sources */,
 				9DC2CB6522ACF01200DE3E21 /* APIClientFactory.swift in Sources */,
 				9DC2CB6F22AD004100DE3E21 /* PhotosListPresenter.swift in Sources */,
+				9DC2CBB122AF844400DE3E21 /* Album.swift in Sources */,
+				9DC2CBAF22AF843C00DE3E21 /* AlbumRequest.swift in Sources */,
 				9DC2CB6322ACEFC900DE3E21 /* SimpleAPIClient.swift in Sources */,
+				9D21E9A422B0411600E9286D /* CreatePhotoRequest.swift in Sources */,
 				9DC2CB7922AD0A6000DE3E21 /* PhotosListTableViewCell.swift in Sources */,
+				9DC2CB9C22AEEE0600DE3E21 /* AlbumItem.swift in Sources */,
 				9D732DB722AC33E4003F98C2 /* PhotosListViewController.swift in Sources */,
 				9DC2CB5322ACEA2900DE3E21 /* SimpleImageService.swift in Sources */,
+				9DC2CB9722AEED1C00DE3E21 /* AddPhotoView.swift in Sources */,
 				9D732DB522AC33E4003F98C2 /* AppDelegate.swift in Sources */,
+				9DC2CB9922AEEDBD00DE3E21 /* AddPhotoInteractor.swift in Sources */,
 				9DC2CB7D22AD0FB500DE3E21 /* PhotosListItem.swift in Sources */,
+				9D21E99122AF895C00E9286D /* CustomTextField.swift in Sources */,
 				9DC2CB8E22AEBC2000DE3E21 /* SimpleImageStorage.swift in Sources */,
+				9DC2CBA022AEEE5400DE3E21 /* AddPhotoRouter.swift in Sources */,
+				9DC2CB9E22AEEE3100DE3E21 /* AddPhotoPresenter.swift in Sources */,
 				9DC2CB5122ACE88A00DE3E21 /* APIClient.swift in Sources */,
 				9DC2CB7122AD00C900DE3E21 /* PhotosListView.swift in Sources */,
 				9DC2CB6122ACEE1E00DE3E21 /* Photo.swift in Sources */,
 				9DC2CB7322AD010500DE3E21 /* PhotosListInteractor.swift in Sources */,
 				9DC2CB5D22ACEDF800DE3E21 /* PhotosRequest.swift in Sources */,
 				9DC2CB8222AD1A0100DE3E21 /* PhotosListDefaultRouter.swift in Sources */,
+				9DC2CBA422AEEE9B00DE3E21 /* AddPhotoDefaultPresenter.swift in Sources */,
+				9DC2CBAC22AEEF1E00DE3E21 /* UIViewController+DisplayError.swift in Sources */,
 				9DC2CB9022AEC47A00DE3E21 /* ImageStorageFactory.swift in Sources */,
 				9DC2CB5622ACEC8200DE3E21 /* ImageServiceFactory.swift in Sources */,
+				9D21E99322AF8D7200E9286D /* AlbumNameValidator.swift in Sources */,
+				9DC2CBA222AEEE9000DE3E21 /* AddPhotoDefaultRouter.swift in Sources */,
 				9DC2CB5822ACECA700DE3E21 /* ImageService.swift in Sources */,
 				9DC2CB8C22AEB9FB00DE3E21 /* ImageStorage.swift in Sources */,
+				9DC2CBA822AEEEB200DE3E21 /* AddPhotoViewController.swift in Sources */,
+				9DC2CBA622AEEEA800DE3E21 /* AddPhotoDefaultInteractor.swift in Sources */,
 				9DC2CB7522AD011800DE3E21 /* PhotosListRouter.swift in Sources */,
 				9DC2CB7F22AD13AB00DE3E21 /* PhotosListDefaultInteractor.swift in Sources */,
 			);

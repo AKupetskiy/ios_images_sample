@@ -19,4 +19,5 @@ protocol PhotosListViewInput: class {
 
 protocol PhotosListViewOutput: class {
     func viewLoaded()
+    func createButtonPressed()
 }

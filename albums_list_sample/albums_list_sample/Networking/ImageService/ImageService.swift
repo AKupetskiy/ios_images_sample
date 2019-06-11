@@ -12,4 +12,7 @@ protocol ImageService {
     var apiClient: APIClient { get }
     
     func getPhotos(_ completion: @escaping (Result<[Photo], Error>) -> Void)
+    func getAlbums(_ completion: @escaping (Result<[Album], Error>) -> Void)
+
+    func createPhoto(name: String, albumId: Int, _ completion: @escaping (Result<Void, Error>) -> Void)
 }

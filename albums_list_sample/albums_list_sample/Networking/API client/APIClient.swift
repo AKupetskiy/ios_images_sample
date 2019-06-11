@@ -18,10 +18,17 @@ enum APIClientError: Error {
 
 //MARK: -
 
-protocol APIRequest: Encodable {
-    associatedtype Response: Decodable
-
+protocol APIRequest {
     var resourceName: String { get }
+}
+
+protocol APIGETRequest: APIRequest {
+    associatedtype Response: Decodable
+}
+
+protocol APIPOSTRequest: APIRequest {
+    var params: Dictionary<String, Any> { get }
+    var headers: Dictionary<String, String> { get }
 }
 
 //MARK: -
@@ -31,5 +38,6 @@ typealias ResultCallback<Value> = (Result<Value, APIClientError>) -> Void
 protocol APIClient {
     var callbackQueue: DispatchQueue { get }
 
-    func send<T: APIRequest>(_ request: T, completion: @escaping ResultCallback<T.Response>)
+    func get<T: APIGETRequest>(_ request: T, completion: @escaping ResultCallback<T.Response>)
+    func post<T: APIPOSTRequest>(_ request: T, completion: @escaping ResultCallback<Void>)
 }

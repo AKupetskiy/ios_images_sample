@@ -25,6 +25,10 @@ extension PhotosListDefaultPresenter: PhotosListViewOutput {
         view.setupView()
         interactor.fetchPhotos()
     }
+
+    func createButtonPressed() {
+        router.presentAddPhotoScreen()
+    }
 }
 
 extension PhotosListDefaultPresenter: PhotosListInteractourOutput {

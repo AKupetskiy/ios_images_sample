@@ -19,28 +19,20 @@ class PhotosListViewController: UITableViewController, PhotosListViewInput {
         output?.viewLoaded()
     }
 
+    @IBAction func createButtonPressed() {
+        output?.createButtonPressed()
+    }
+
     // MARK: - PhotosListViewInput
 
     func setupView() {
         tableView.tableFooterView = UIView()
-
     }
 
     func display(photos: [PhotosListItem]) {
         self.photos = photos
 
         tableView.reloadData()
-    }
-
-    func display(error: Error) {
-        let alertController = UIAlertController(title: "Alert", message: error.localizedDescription, preferredStyle: .alert)
-
-        let action = UIAlertAction(title: "OK", style: .default) { (action: UIAlertAction) in
-        }
-
-        alertController.addAction(action)
-
-        present(alertController, animated: true, completion: nil)
     }
 
     // MARK: - Table view calls
