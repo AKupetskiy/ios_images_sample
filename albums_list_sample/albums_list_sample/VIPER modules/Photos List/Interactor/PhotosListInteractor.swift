@@ -8,14 +8,14 @@
 
 import Foundation
 
-protocol PhotosListInteractorInput: class {
+protocol PhotosListInteractorInput: AnyObject {
     var output: PhotosListInteractourOutput? { get set }
 
     func fetchPhotos()
 
 }
 
-protocol PhotosListInteractourOutput: class {
+protocol PhotosListInteractourOutput: AnyObject {
     func photosLoaded(photos: [PhotosListItem])
     func photosFailedToLoad(error: Error) 
 }

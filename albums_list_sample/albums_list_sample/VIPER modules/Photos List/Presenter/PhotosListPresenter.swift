@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol PhotosListPresenter: class {
+protocol PhotosListPresenter: AnyObject {
 
     var view: PhotosListViewInput { get set }
     var interactor: PhotosListInteractorInput { get set }

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol PhotosListRouter: class {
+protocol PhotosListRouter: AnyObject {
     var parentController: UIViewController { get }
 
     func presentModule()

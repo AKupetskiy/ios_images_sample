@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-
 final class SimpleImageStorage: ImageStorage {
     let callbackQueue: DispatchQueue
     let urlSession: URLSession

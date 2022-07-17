@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol AddPhotoPresenter: class {
+protocol AddPhotoPresenter: AnyObject {
 
     var view: AddPhotoViewInput? { get set }
     var interactor: AddPhotoInteractorInput? { get set }

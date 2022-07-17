@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol AddPhotoRouter: class {
+protocol AddPhotoRouter: AnyObject {
     var parentController: UIViewController { get }
     func presentModule()
     func dismissModule()

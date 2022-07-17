@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol PhotosListViewInput: class {
+protocol PhotosListViewInput: AnyObject {
     var output: PhotosListViewOutput? { get }
 
     func display(photos: [PhotosListItem])
@@ -17,7 +17,7 @@ protocol PhotosListViewInput: class {
     func setupView()
 }
 
-protocol PhotosListViewOutput: class {
+protocol PhotosListViewOutput: AnyObject {
     func viewLoaded()
     func createButtonPressed()
 }

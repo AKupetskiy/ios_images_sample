@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol AddPhotoViewInput: class {
+protocol AddPhotoViewInput: AnyObject {
     var output: AddPhotoViewOutput? { get }
 
     func show(albums: [AlbumItem])
@@ -22,7 +22,7 @@ protocol AddPhotoViewInput: class {
     func getAlbumName() -> String?
 }
 
-protocol AddPhotoViewOutput: class {
+protocol AddPhotoViewOutput: AnyObject {
     func viewLoaded()
     func cancelButtonPressed()
     func createButtonPressed()

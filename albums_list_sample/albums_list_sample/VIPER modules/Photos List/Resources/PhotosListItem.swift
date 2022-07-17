@@ -35,15 +35,15 @@ final class PhotosListItem {
             return
         }
 
-        storage?.provideImage(thumbURL) { result in
-            // check if image is for corrent item
-            if case let .success(tuple) = result,
-                self.thumbURL == tuple.url {
-
-                self.thumbnail = tuple.image
-                self.onThumbProvided?(tuple.image)
-            }
-        }
-    }
-
+        storage?.provideImage(thumbURL) { [weak self] result in
+			guard let self = self, case .success(let tuple) = result else {
+				return
+			}
+			// check if image is for corrent item
+			if self.thumbURL == tuple.url {
+				self.thumbnail = tuple.image
+				self.onThumbProvided?(tuple.image)
+			}
+		}
+	}
 }

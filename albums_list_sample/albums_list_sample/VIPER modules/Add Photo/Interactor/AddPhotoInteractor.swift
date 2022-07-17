@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol AddPhotoInteractorInput: class {
+protocol AddPhotoInteractorInput: AnyObject {
     var output: AddPhotoInteractorOutput? { get set }
 
     func fetchAlbums()
@@ -16,7 +16,7 @@ protocol AddPhotoInteractorInput: class {
 
 }
 
-protocol AddPhotoInteractorOutput: class {
+protocol AddPhotoInteractorOutput: AnyObject {
     func albumsLoaded(albums: [AlbumItem])
     func albumsFailedToLoad(error: Error)
 

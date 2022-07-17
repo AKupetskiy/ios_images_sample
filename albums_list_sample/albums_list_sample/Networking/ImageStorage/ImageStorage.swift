@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-
 enum ImageStorageError: Error {
     case networkError(decription: String, code: Int)
     case invalidParams
@@ -17,7 +16,7 @@ enum ImageStorageError: Error {
     case unknown
 }
 
-protocol ImageStorage: class {
+protocol ImageStorage: AnyObject {
     var callbackQueue: DispatchQueue { get }
 
     func provideImage(_ imageURL: String, completion: @escaping (Result<(url: String, image: UIImage?), ImageStorageError>) -> Void)
